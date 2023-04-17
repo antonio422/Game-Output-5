@@ -32,8 +32,11 @@ public class ThirdPersonShooterController : MonoBehaviour
         worldAimTarget.y = transform.position.y;
         Vector3 aimDirection = (worldAimTarget - transform.position).normalized;
 
-        transform.forward = Vector3.Lerp(transform.forward, aimDirection, Time.deltaTime * 20f);
-    
+        // transform.forward = Vector3.Lerp(transform.forward, aimDirection, Time.deltaTime * 20f);
+        // transform.forward = aimDirection;
+        Vector3 genDirection = new Vector3(ray.direction.x, 0f, ray.direction.z);
+        transform.forward = Vector3.Lerp(transform.forward, genDirection, Time.deltaTime * 20f);
+
         if (starterAssetsInputs.shoot) {
             Vector3 aimDir = (mouseWorldPosition - spawnBulletPosition.position).normalized;
             Instantiate(pfBulletProjectile, spawnBulletPosition.position, Quaternion.LookRotation(aimDir, Vector3.up));

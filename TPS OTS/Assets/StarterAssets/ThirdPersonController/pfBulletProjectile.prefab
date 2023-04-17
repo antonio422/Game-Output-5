@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3578515975649414895}
   - component: {fileID: 3578515975649414894}
   - component: {fileID: -2208970484612900597}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: pfBulletProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,8 +114,8 @@ CapsuleCollider:
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Direction: 0
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!114 &-2208970484612900597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,3 +128,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30b8d24b85f22b14f8d5afc9dff066c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vfxHit: {fileID: 8443315704496310909, guid: 6ef35fa36e3a65043b2d800600204bdd, type: 3}
